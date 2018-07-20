@@ -1,6 +1,8 @@
 //Goals
 //crud
 
+//add this to "my ignores" in gitignore
+
 //accept data -- form, event listener, function to accept to form data
 
 //store data -- accept validated form data to write to local storage
@@ -23,7 +25,10 @@ MVP
 
 //2. add event listener(s)
 
-//3. Learn about local storage
+//3. Learn about local storage √
+//3a. added storage button √
+//3b. can get storage √
+//3c. can delete storage  √
 
 //4. implement basic write to local storage (hard code)
 
