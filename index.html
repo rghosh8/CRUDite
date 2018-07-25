@@ -1,34 +1,70 @@
 <!DOCTYPE html> 
 <html>
 	<head>
-		<title>CRUD</title>
-		<!--
-	Add link to css
-	Add link to jquery
-	Add link to app
-	Add link to misc
-		-->
+		<title>Code Ninja</title>
+
+  <link rel="shortcut icon" href="favicon.ico" sizes="64x64"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">	
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 		<script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+   <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
   <script src="app.js"></script>
 	</head>
 
 <body>
-  <div>
+  <div class="container">
+  <div class="titleContainer">
+    <div id="header" a href=".">&#60;Code Ninja&#47;&#62;<span class="bar">|</span></div>
+    
+    <div id="motto">Create.Update.Delete</div>
+    
+    <div id="buttonContainer">
+	<button class="store-button">Save Code</button>
+	<button class="get-button">Retrieve Code</button>
+	<button class="delete-button">Delete Code</button>
+  <button class="run-button">Run Code</button>
+   </div>
+  <div id="recent-snippets">Recent Snippets
+    <div class="snippet-box"></div>
+  </div>
+ </div>
 
-	<input class="input-title-field" type="text">
-	<input class="input-code-field" type="text">
-
-	<button class="store-button">Store Data</button>
-	<button class="get-button">Get Data</button>
-	<button class="delete-button">Delete</button>
+ <div id="codeContainer">
+   <div class="textContainer">
+    <p class="synopsis">
+    	<strong><u>Code Ninja</u></strong>
+    	is an interactive Javascript IDE for Chrome. 
+    	It saves your code to your PC's local storage 
+    	and can retrieve saved code long after submission. 
+    	Write, edit, update and delete code with the click of a button.</p>
+    <p class="synopsisBreak">
+        Your code will never break formatting and will last as long as 
+        your computer does. After running your code, press Command + Option + J
+        to see the result.</p> 
+    </div>
+  <textarea class="input-title-field" type="text" placeholder="Code Title Here...">codeNinja.js</textarea> 
+	<pre id="editor">const codeNinja = function() {
+		return "Welcome to Code Ninja!";
+}
+codeNinja();</pre>
+ <script src="ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+ <script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/iplastic");
+    editor.session.setMode("ace/mode/javascript");
+ </script>
+<span class="built-with">Built using ACE and Jquery</span>
+</div>
   
-  </div>
-  <div class="debug">
-  	
-  </div>
+
+</div>
+<div id="footer">Created and maintained by Anthony Quattrocchi | github.com/Anthony-Q | Hack Reactor LA</div>
 </body>
 
 </html>
